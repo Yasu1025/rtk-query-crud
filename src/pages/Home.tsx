@@ -1,10 +1,21 @@
-import React, { memo, VFC } from "react";
+import React, { memo, useEffect, VFC } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useGetContactsQuery } from "../services/contactsApi";
 import { Contact } from "../models/contact.model";
 
 const Home: VFC = memo(() => {
   const { data, isLoading, error } = useGetContactsQuery();
+
+  useEffect(() => {
+    if (error) {
+      toast.error("Something went wrong...");
+    }
+  }, [error]);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
   return (
     <div style={{ marginTop: "100px" }}>
       <Link to="/addContact">

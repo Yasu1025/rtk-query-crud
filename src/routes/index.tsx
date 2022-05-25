@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Home from "../pages/Home";
 import AddEdit from "../pages/AddEdit";
 import Info from "../pages/Info";
@@ -7,6 +8,7 @@ import Info from "../pages/Info";
 const MyRouter = memo(() => {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add-contact" element={<AddEdit />} />
