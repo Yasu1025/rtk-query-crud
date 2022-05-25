@@ -1,9 +1,12 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { contactsApi } from "../services/contactsApi";
 
 export const store = configureStore({
   reducer: {
-    // todo
+    [contactsApi.reducerPath]: contactsApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(contactsApi.middleware),
 });
 
 export type AppDispatch = typeof store.dispatch;
