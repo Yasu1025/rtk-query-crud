@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "name": "dummy name 01",
+      "email": "dummy01@test.com",
+      "contact": "07011111111",
+      "id": 1
+    },
+    {
+      "name": "dummy name 02",
+      "email": "dummy02@test.com",
+      "contact": "07011112222",
+      "id": 2
+    },
+    {
+      "name": "dummy name 03",
+      "email": "dummy03@test.com",
+      "contact": "07011113333",
+      "id": 3
+    },
+    {
+      "name": "dummy name 04",
+      "email": "dummy04@test.com",
+      "contact": "07011114444",
+      "id": 4
+    }
+  ]
+}
